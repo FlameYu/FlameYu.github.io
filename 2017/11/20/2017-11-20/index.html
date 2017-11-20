@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="design pattern," />
 
 
 
@@ -95,13 +95,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="FlameYu&#39;s Blog">
-<meta property="og:url" content="http://FlameYu.github.io/index.html">
+<meta name="description" content="设计模式系列-单例模式定义 Ensure a class only one instance, and provide a global point of access it.确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。  应用优点 单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。">
+<meta name="keywords" content="design pattern">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-单例模式">
+<meta property="og:url" content="http://FlameYu.github.io/2017/11/20/2017-11-20/index.html">
 <meta property="og:site_name" content="FlameYu&#39;s Blog">
+<meta property="og:description" content="设计模式系列-单例模式定义 Ensure a class only one instance, and provide a global point of access it.确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。  应用优点 单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/screenshot.png">
+<meta property="og:updated_time" content="2017-11-20T10:03:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FlameYu&#39;s Blog">
+<meta name="twitter:title" content="设计模式-单例模式">
+<meta name="twitter:description" content="设计模式系列-单例模式定义 Ensure a class only one instance, and provide a global point of access it.确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。  应用优点 单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。">
+<meta name="twitter:image" content="http://ovhpt42w3.bkt.clouddn.com/screenshot.png">
 
 
 
@@ -131,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://FlameYu.github.io/"/>
+  <link rel="canonical" href="http://FlameYu.github.io/2017/11/20/2017-11-20/"/>
 
 
 
 
 
-  <title>FlameYu's Blog</title>
+  <title>设计模式-单例模式 | FlameYu's Blog</title>
   
 
 
@@ -156,8 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,9 +236,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -262,9 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/20/2017-11-20/" itemprop="url">设计模式-单例模式</a></h1>
+          <h1 class="post-title" itemprop="name headline">设计模式-单例模式</h1>
         
 
         <div class="post-meta">
@@ -314,9 +318,7 @@
       
 
       
-        
-          
-            <h1 id="设计模式系列-单例模式"><a href="#设计模式系列-单例模式" class="headerlink" title="设计模式系列-单例模式"></a>设计模式系列-单例模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
+        <h1 id="设计模式系列-单例模式"><a href="#设计模式系列-单例模式" class="headerlink" title="设计模式系列-单例模式"></a>设计模式系列-单例模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
 <p>Ensure a class only one instance, and provide a global point of access it.<br>确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。<br><img src="http://ovhpt42w3.bkt.clouddn.com/screenshot.png" alt="screenshot"></p>
 </blockquote>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
@@ -347,8 +349,6 @@
 </li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -363,14 +363,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/design-pattern/" rel="tag"># design pattern</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -380,10 +386,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -391,6 +398,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -411,8 +422,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">Flame Yu</p>
@@ -464,6 +484,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式系列-单例模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式系列-单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">1.2.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用代码"><span class="nav-number">1.3.</span> <span class="nav-text">通用代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最佳实践"><span class="nav-number">1.4.</span> <span class="nav-text">最佳实践</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -591,6 +627,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 

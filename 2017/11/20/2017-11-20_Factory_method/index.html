@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="design pattern," />
 
 
 
@@ -95,13 +95,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="FlameYu&#39;s Blog">
-<meta property="og:url" content="http://FlameYu.github.io/index.html">
+<meta name="description" content="设计模式系列-工厂方法模式定义 Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.定义一个用于创建对象的接口，让子类决定实例化哪一">
+<meta name="keywords" content="design pattern">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-工厂方法模式">
+<meta property="og:url" content="http://FlameYu.github.io/2017/11/20/2017-11-20_Factory_method/index.html">
 <meta property="og:site_name" content="FlameYu&#39;s Blog">
+<meta property="og:description" content="设计模式系列-工厂方法模式定义 Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.定义一个用于创建对象的接口，让子类决定实例化哪一">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/工厂方法模式.png">
+<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/工厂模式通用类图.png">
+<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/工厂模式实现单例模式.png">
+<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/screenshot.png">
+<meta property="og:updated_time" content="2017-11-21T05:56:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FlameYu&#39;s Blog">
+<meta name="twitter:title" content="设计模式-工厂方法模式">
+<meta name="twitter:description" content="设计模式系列-工厂方法模式定义 Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.定义一个用于创建对象的接口，让子类决定实例化哪一">
+<meta name="twitter:image" content="http://ovhpt42w3.bkt.clouddn.com/工厂方法模式.png">
 
 
 
@@ -131,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://FlameYu.github.io/"/>
+  <link rel="canonical" href="http://FlameYu.github.io/2017/11/20/2017-11-20_Factory_method/"/>
 
 
 
 
 
-  <title>FlameYu's Blog</title>
+  <title>设计模式-工厂方法模式 | FlameYu's Blog</title>
   
 
 
@@ -156,8 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,9 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -262,9 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/20/2017-11-20_Factory_method/" itemprop="url">设计模式-工厂方法模式</a></h1>
+          <h1 class="post-title" itemprop="name headline">设计模式-工厂方法模式</h1>
         
 
         <div class="post-meta">
@@ -314,9 +321,7 @@
       
 
       
-        
-          
-            <h1 id="设计模式系列-工厂方法模式"><a href="#设计模式系列-工厂方法模式" class="headerlink" title="设计模式系列-工厂方法模式"></a>设计模式系列-工厂方法模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
+        <h1 id="设计模式系列-工厂方法模式"><a href="#设计模式系列-工厂方法模式" class="headerlink" title="设计模式系列-工厂方法模式"></a>设计模式系列-工厂方法模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
 <p>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.<br>定义一个用于创建对象的接口，让子类决定实例化哪一个类，工厂方法使一个类的实例化延迟到其子类。<br><img src="http://ovhpt42w3.bkt.clouddn.com/工厂方法模式.png" alt="工厂方法模式"></p>
 </blockquote>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
@@ -374,8 +379,6 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteProduct1</span> <span class="keyword">extends</span> <span class="title">Product</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//逻辑处理</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteProduct2</span> <span class="keyword">extends</span> <span class="title">Product</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//逻辑处理</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>延迟加载可以拓展，可以设置最大实例化数量，也可以在对象初始化复杂的情况下，降低对象的产生和销毁带的复杂性。</p>
 
-          
-        
       
     </div>
     
@@ -390,165 +393,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://FlameYu.github.io/2017/11/20/2017-11-20_SINGLETON/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Flame Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FlameYu's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/20/2017-11-20_SINGLETON/" itemprop="url">设计模式-单例模式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-20T17:10:00+08:00">
-                2017-11-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/design-pattern/" rel="tag"># design pattern</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="设计模式系列-单例模式"><a href="#设计模式系列-单例模式" class="headerlink" title="设计模式系列-单例模式"></a>设计模式系列-单例模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
-<p>Ensure a class only one instance, and provide a global point of access it.<br>确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。<br><img src="http://ovhpt42w3.bkt.clouddn.com/screenshot.png" alt="screenshot"></p>
-</blockquote>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。</li>
-<li>单例模式可以避免对资源的多重占用。</li>
-<li>单例模式可以在系统设置全局的访问点，优化和共享资源访问。</li>
-</ul>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
-<li>单例模式拓展很困难。</li>
-<li>单例模式对测试非常不友好。</li>
-<li>单利模式和单一职责原则有冲突，一个类应该只实现一个逻辑，而不应该关系它是否单例，是不是单例取决于环境，单例模式把”要单例“和业务逻辑融合在一个类中。</li>
-</ul>
-<h2 id="通用代码"><a href="#通用代码" class="headerlink" title="通用代码"></a>通用代码</h2><ul>
-<li>饿汉式单例模式 </li>
-</ul>
-<p>在类创建的同时就已经创建好一个静态的对象供系统使用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton singleton = <span class="keyword">new</span> Singleton();</div><div class="line">	</div><div class="line">	<span class="comment">//限制产生多个对象</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//通过该方法获得实例对象</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> singleton;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//类中其他方法，尽量是static</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>懒汉式单例模式 </li>
-</ul>
-<p>按需加载，则需要加入synchronized 保证多线程下的安全</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</div><div class="line">	</div><div class="line">	<span class="comment">//限制产生多个对象</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//通过该方法获得实例对象</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</div><div class="line">			singleton = <span class="keyword">new</span> Singleton();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> singleton;		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>有上限的多例模式：需要参数固定数量对象的模式，他是单例模式的一种拓展。<br>这样的好处是我们可以决定内存中有多少个实例，可以修正单例模式带来的性能问题。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Multition</span></span>&#123;</div><div class="line">    <span class="comment">//指定内存中可以存在的实例的个数</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> maxNumber = <span class="number">3</span>;</div><div class="line">    </div><div class="line">    <span class="comment">//存放实例的Map</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;Integer,Multition&gt; multitions = <span class="keyword">new</span> HashMap&lt;Integer,Multition&gt;();</div><div class="line">    </div><div class="line">    <span class="comment">//在类被加载的创建指定个数的实例</span></div><div class="line">    <span class="keyword">static</span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i&lt; maxNumber ; i++)&#123;</div><div class="line">            multitions.put(i,<span class="keyword">new</span> Multition());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">private</span> Multition（）&#123;&#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Multition <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">        Random r = <span class="keyword">new</span> Random();</div><div class="line">        index = random.nextInt(maxNumber);</div><div class="line">        Multition multition = multitions.get(index);</div><div class="line">        <span class="keyword">return</span> multition;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIndex</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> index;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>使用单例模式需要注意的一点就是 JVM的垃圾回收机制，如果我们的一个单例对象在内存 中长久不使用，JVM就认为这个对象是一个垃圾，在CPU资源空闲的情况下该对象会被清理 掉，下次再调用时就需要重新产生一个对象。</p>
-<ul>
-<li><p>由容器管理单例的生命周期<br>Java EE 容器 和 Spring 可以让对象长久驻留内存。</p>
-</li>
-<li><p>状态随时记录<br>可以使用异步记录的方式，或者使用观察者模式，记录状态的变化，然后进行持久化，确保，单例对象重新初始化也可以获得摧毁前的数据，避免数据丢失。</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/20/2017-11-20_SINGLETON/" rel="next" title="设计模式-单例模式">
+                <i class="fa fa-chevron-left"></i> 设计模式-单例模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -558,10 +432,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -569,6 +444,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -589,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">Flame Yu</p>
@@ -642,6 +530,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式系列-工厂方法模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式系列-工厂方法模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">1.2.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用代码"><span class="nav-number">1.3.</span> <span class="nav-text">通用代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展"><span class="nav-number">1.4.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">1.4.1.</span> <span class="nav-text">简单工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#替代单例模式"><span class="nav-number">1.4.2.</span> <span class="nav-text">替代单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延迟化加载"><span class="nav-number">1.4.3.</span> <span class="nav-text">延迟化加载</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -769,6 +673,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 

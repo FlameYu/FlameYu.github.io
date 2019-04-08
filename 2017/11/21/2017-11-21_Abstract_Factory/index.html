@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -74,21 +74,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="design pattern," />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="design pattern,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
@@ -104,7 +104,7 @@
 <meta property="og:description" content="设计模式系列-抽象工厂模式定义 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.为创建一组相关或相互依赖的对象提供一个接口，而且无需指定他们的具体类。   应用抽象工厂模式是工厂方法模式的升级版本，在有多个业务品种">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/抽象工厂模式.png">
-<meta property="og:updated_time" content="2017-11-28T11:33:33.508Z">
+<meta property="og:updated_time" content="2017-11-28T11:45:10.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-抽象工厂模式">
 <meta name="twitter:description" content="设计模式系列-抽象工厂模式定义 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.为创建一组相关或相互依赖的对象提供一个接口，而且无需指定他们的具体类。   应用抽象工厂模式是工厂方法模式的升级版本，在有多个业务品种">
@@ -138,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://FlameYu.github.io/2017/11/21/2017-11-21_Abstract_Factory/"/>
+  <link rel="canonical" href="http://FlameYu.github.io/2017/11/21/2017-11-21_Abstract_Factory/">
 
 
 
@@ -172,7 +172,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">FlameYu's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -202,7 +202,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -212,7 +212,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -255,7 +255,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Flame Yu">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -330,16 +330,16 @@
 <h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
 <li>拓展非常困难</li>
 </ul>
-<h2 id="通用代码"><a href="#通用代码" class="headerlink" title="通用代码"></a>通用代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractCreator</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="comment">//创建A产品家族</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> AbstractProductA <span class="title">createProductA</span><span class="params">()</span></span>;</div><div class="line">	</div><div class="line">	<span class="comment">//创建B产品家族</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> AbstractProductB <span class="title">createProductB</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractProductA</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="comment">//每个产品共有的方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shareMethod</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//每个产品相同方法，不同实现</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractProductB</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="comment">//每个产品共有的方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shareMethod</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//每个产品相同方法，不同实现</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="comment">//定义出两个工厂</span></div><div class="line">		AbstractCreator creator1 = <span class="keyword">new</span> Creator1();</div><div class="line">		AbstractCreator creator2 = <span class="keyword">new</span> Creator2();</div><div class="line">		</div><div class="line">		<span class="comment">//产生A1对象</span></div><div class="line">		AbstractProductA a1 =  creator1.createProductA();</div><div class="line">		<span class="comment">//产生A2对象</span></div><div class="line">		AbstractProductA a2 = creator2.createProductA();</div><div class="line">		<span class="comment">//产生B1对象</span></div><div class="line">		AbstractProductB b1 = creator1.createProductB();</div><div class="line">		<span class="comment">//产生B2对象</span></div><div class="line">		AbstractProductB b2 = creator2.createProductB();</div><div class="line">		</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * 然后在这里就可以为所欲为了...</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Creator1</span> <span class="keyword">extends</span> <span class="title">AbstractCreator</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="comment">//只生产产品等级为1的A产品</span></div><div class="line">	<span class="function"><span class="keyword">public</span> AbstractProductA <span class="title">createProductA</span><span class="params">()</span> </span>&#123;	</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductA1();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//只生产铲平等级为1的B产品</span></div><div class="line">	<span class="function"><span class="keyword">public</span> AbstractProductB <span class="title">createProductB</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductB1();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Creator2</span> <span class="keyword">extends</span> <span class="title">AbstractCreator</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="comment">//只生产产品等级为2的A产品</span></div><div class="line">	<span class="function"><span class="keyword">public</span> AbstractProductA <span class="title">createProductA</span><span class="params">()</span> </span>&#123;	</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductA2();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//只生产铲平等级为2的B产品</span></div><div class="line">	<span class="function"><span class="keyword">public</span> AbstractProductB <span class="title">createProductB</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductB2();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductA1</span> <span class="keyword">extends</span> <span class="title">AbstractProductA</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"产品A1的实现方法"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductA2</span> <span class="keyword">extends</span> <span class="title">AbstractProductA</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"产品A2的实现方法"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductB1</span> <span class="keyword">extends</span> <span class="title">AbstractProductB</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"产品B1的实现方法"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductB2</span> <span class="keyword">extends</span> <span class="title">AbstractProductB</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"产品B2的实现方法"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="通用代码"><a href="#通用代码" class="headerlink" title="通用代码"></a>通用代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractCreator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建A产品家族</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> AbstractProductA <span class="title">createProductA</span><span class="params">()</span></span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//创建B产品家族</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> AbstractProductB <span class="title">createProductB</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractProductA</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//每个产品共有的方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shareMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//每个产品相同方法，不同实现</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractProductB</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//每个产品共有的方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shareMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//每个产品相同方法，不同实现</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//定义出两个工厂</span></span><br><span class="line">		AbstractCreator creator1 = <span class="keyword">new</span> Creator1();</span><br><span class="line">		AbstractCreator creator2 = <span class="keyword">new</span> Creator2();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//产生A1对象</span></span><br><span class="line">		AbstractProductA a1 =  creator1.createProductA();</span><br><span class="line">		<span class="comment">//产生A2对象</span></span><br><span class="line">		AbstractProductA a2 = creator2.createProductA();</span><br><span class="line">		<span class="comment">//产生B1对象</span></span><br><span class="line">		AbstractProductB b1 = creator1.createProductB();</span><br><span class="line">		<span class="comment">//产生B2对象</span></span><br><span class="line">		AbstractProductB b2 = creator2.createProductB();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 然后在这里就可以为所欲为了...</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Creator1</span> <span class="keyword">extends</span> <span class="title">AbstractCreator</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//只生产产品等级为1的A产品</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> AbstractProductA <span class="title">createProductA</span><span class="params">()</span> </span>&#123;	</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductA1();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//只生产铲平等级为1的B产品</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> AbstractProductB <span class="title">createProductB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductB1();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Creator2</span> <span class="keyword">extends</span> <span class="title">AbstractCreator</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//只生产产品等级为2的A产品</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> AbstractProductA <span class="title">createProductA</span><span class="params">()</span> </span>&#123;	</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductA2();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//只生产铲平等级为2的B产品</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> AbstractProductB <span class="title">createProductB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ProductB2();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductA1</span> <span class="keyword">extends</span> <span class="title">AbstractProductA</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"产品A1的实现方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductA2</span> <span class="keyword">extends</span> <span class="title">AbstractProductA</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"产品A2的实现方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductB1</span> <span class="keyword">extends</span> <span class="title">AbstractProductB</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"产品B1的实现方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductB2</span> <span class="keyword">extends</span> <span class="title">AbstractProductB</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"产品B2的实现方法"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>抽象工厂模式是所有形态的工厂模式中最为抽象和最具一般性的一种形态。抽象工厂模式是指当有多个抽象角色时，使用的一种工厂模式。<br>抽象工厂模式可以向客户端提供一个接口，使客户端在不必指定产品的具体的情况下，创建多个产品族中的产品对象。根据里氏替换原则，任何接受父类型的地方，都应当能够接受子类型。因此，实际上系统所需要的，仅仅是类型与这些抽象产品角色相同的一些实例，而不是这些抽象产品的实例。换言之，也就是这些抽象产品的具体子类的实例。工厂类负责创建抽象产品的具体子类的实例。</p>
 
       
@@ -381,8 +381,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/28/2017-11-28_design principle/" rel="prev" title="设计模式-六大设计原则">
-                设计模式-六大设计原则 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/28/2017-12-07_template_mathod/" rel="prev" title="设计模式系列-模板方法模式">
+                设计模式系列-模板方法模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -436,7 +436,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -459,7 +459,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -527,10 +527,10 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="design pattern,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -95,18 +95,19 @@
 
 
 
-<meta name="description" content="设计原则开闭原则（OCP）：open for extension, but close for modification。在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展。这个是最最基础的原则。 单一职责原则（SRP）：never be more than one reason for a class to change。专注做一件事情，仅有一个引起变化的原因，“职责”可以理解成“">
-<meta name="keywords" content="design pattern">
+<meta name="description" content="JCF - Overview泛型（Generics）Java容器能够容纳任何类型的对象，这一点表面上是通过泛型机制完成，泛型只是编译器为我们提供的一个“语法糖”，泛型本身并不需要Java虚拟机的支持，只需要在编译阶段做一下简单的字符串替换即可。实质上Java的单继承机制才是保证这一特性的根本，因为所有的对象都是Object的子类，容器里只要能够存放Object对象即可。事实上，所有的容器内部存放的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式-六大设计原则">
-<meta property="og:url" content="http://FlameYu.github.io/2017/11/28/2017-11-28_design principle/index.html">
+<meta property="og:title" content="FlameYu&#39;s Blog">
+<meta property="og:url" content="http://FlameYu.github.io/2019/04/08/2019-04-08 JCF-Overview/index.html">
 <meta property="og:site_name" content="FlameYu&#39;s Blog">
-<meta property="og:description" content="设计原则开闭原则（OCP）：open for extension, but close for modification。在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展。这个是最最基础的原则。 单一职责原则（SRP）：never be more than one reason for a class to change。专注做一件事情，仅有一个引起变化的原因，“职责”可以理解成“">
+<meta property="og:description" content="JCF - Overview泛型（Generics）Java容器能够容纳任何类型的对象，这一点表面上是通过泛型机制完成，泛型只是编译器为我们提供的一个“语法糖”，泛型本身并不需要Java虚拟机的支持，只需要在编译阶段做一下简单的字符串替换即可。实质上Java的单继承机制才是保证这一特性的根本，因为所有的对象都是Object的子类，容器里只要能够存放Object对象即可。事实上，所有的容器内部存放的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-28T11:41:24.688Z">
+<meta property="og:image" content="http://flameyu.github.io/2019/04/08/2019-04-08%20JCF-Overview/media/JCF_Collection_Interfaces.png">
+<meta property="og:updated_time" content="2019-04-08T06:10:17.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式-六大设计原则">
-<meta name="twitter:description" content="设计原则开闭原则（OCP）：open for extension, but close for modification。在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展。这个是最最基础的原则。 单一职责原则（SRP）：never be more than one reason for a class to change。专注做一件事情，仅有一个引起变化的原因，“职责”可以理解成“">
+<meta name="twitter:title" content="FlameYu&#39;s Blog">
+<meta name="twitter:description" content="JCF - Overview泛型（Generics）Java容器能够容纳任何类型的对象，这一点表面上是通过泛型机制完成，泛型只是编译器为我们提供的一个“语法糖”，泛型本身并不需要Java虚拟机的支持，只需要在编译阶段做一下简单的字符串替换即可。实质上Java的单继承机制才是保证这一特性的根本，因为所有的对象都是Object的子类，容器里只要能够存放Object对象即可。事实上，所有的容器内部存放的">
+<meta name="twitter:image" content="http://flameyu.github.io/2019/04/08/2019-04-08%20JCF-Overview/media/JCF_Collection_Interfaces.png">
 
 
 
@@ -136,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://FlameYu.github.io/2017/11/28/2017-11-28_design principle/">
+  <link rel="canonical" href="http://FlameYu.github.io/2019/04/08/2019-04-08 JCF-Overview/">
 
 
 
 
 
-  <title>设计模式-六大设计原则 | FlameYu's Blog</title>
+  <title> | FlameYu's Blog</title>
   
 
 
@@ -249,7 +250,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://FlameYu.github.io/2017/11/28/2017-11-28_design principle/">
+    <link itemprop="mainEntityOfPage" href="http://FlameYu.github.io/2019/04/08/2019-04-08 JCF-Overview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Flame Yu">
@@ -266,7 +267,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设计模式-六大设计原则</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -278,8 +279,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T19:40:00+08:00">
-                2017-11-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-08T11:09:11+08:00">
+                2019-04-08
               </time>
             
 
@@ -316,12 +317,13 @@
       
 
       
-        <h1 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h1><h2 id="开闭原则（OCP）："><a href="#开闭原则（OCP）：" class="headerlink" title="开闭原则（OCP）："></a>开闭原则（OCP）：</h2><p>open for extension, but close for modification。<br>在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展。这个是最最基础的原则。</p>
-<h2 id="单一职责原则（SRP）："><a href="#单一职责原则（SRP）：" class="headerlink" title="单一职责原则（SRP）："></a>单一职责原则（SRP）：</h2><p>never be more than one reason for a class to change。<br>专注做一件事情，仅有一个引起变化的原因，“职责”可以理解成“变化的原因”。唯有专注，才能够保证对象的高内聚；唯有单一，才能保证对象的细粒度。</p>
-<h2 id="里氏替换原则（LSP）："><a href="#里氏替换原则（LSP）：" class="headerlink" title="里氏替换原则（LSP）："></a>里氏替换原则（LSP）：</h2><p>Liskov提出:” Let Φ(x) be a property provable about objects x of type T. Then  Φ(y) should be true for objects y of type S, where S is a subtype of T.”<br>这里的type，我理解成class。子类的对象可以无条件地替换父类的对象，并且不引起程序的改变。或者说：只要父类能出现的地方，子类就可以出现。</p>
-<h2 id="依赖倒置原则（DIP）："><a href="#依赖倒置原则（DIP）：" class="headerlink" title="依赖倒置原则（DIP）："></a>依赖倒置原则（DIP）：</h2><p>High level modules should not depend upon low level modules. Both should depend upon abstractions. Abstractions should not depend upon details. Details should depend upon abstractions.<br>即高层模块不依赖低层模块；高、低层模块都依赖其抽象；抽象不依赖细节，反过来细节依赖抽象。在JAVA中，所谓的抽象，就是接口或者抽象类；所谓细节，就是就实现类（能够实例化生成对象的类）。为什么说“倒置”？因为在传统的面向过程的设计中，高层次的模块依赖于低层次的模块，抽象层依赖于具体层（这样不好），倒置过来后，就成为了面向对象设计的一个原则了（这样子好）。</p>
-<h2 id="接口隔离原则（ISP）："><a href="#接口隔离原则（ISP）：" class="headerlink" title="接口隔离原则（ISP）："></a>接口隔离原则（ISP）：</h2><p>The dependency of one class to another should depend on the smallest possible interface.<br>类间的依赖关系应该建立在最小的接口上面。客户端不应该依赖他不需要的接口，只提供调用者需要的方法，屏蔽不需要的方法。一个接口代表一个角色，使用多个专门的接口比使用单一的总接口更好。</p>
-<h2 id="迪米特法则（LoD）又称最少知识原则（LKP）"><a href="#迪米特法则（LoD）又称最少知识原则（LKP）" class="headerlink" title="迪米特法则（LoD）又称最少知识原则（LKP）:"></a>迪米特法则（LoD）又称最少知识原则（LKP）:</h2><p>Each unit should only talk to its friends; don’t talk to strangers. Only talk to your immediate friends. Each unit should have only limited knowledge about other units. 曾经在美国有一个项目叫做Demeter。LoD is a specific case of loose coupling. 此原则的核心观念就是类之间的弱耦合，在这种情况下，类的复用率才可以提升。</p>
+        <h1 id="JCF-Overview"><a href="#JCF-Overview" class="headerlink" title="JCF - Overview"></a>JCF - Overview</h1><h2 id="泛型（Generics）"><a href="#泛型（Generics）" class="headerlink" title="泛型（Generics）"></a>泛型（Generics）</h2><p>Java容器能够容纳任何类型的对象，这一点表面上是通过泛型机制完成，泛型只是编译器为我们提供的一个“语法糖”，泛型本身并不需要Java虚拟机的支持，只需要在编译阶段做一下简单的字符串替换即可。实质上Java的单继承机制才是保证这一特性的根本，因为所有的对象都是Object的子类，容器里只要能够存放Object对象即可。<br>事实上，所有的容器内部存放的都是Object对象，泛型机制只是简化了编程，由编译器自动为我们完成了强转而已。</p>
+<h2 id="接口和实现（Interfaces-and-Implementations）"><a href="#接口和实现（Interfaces-and-Implementations）" class="headerlink" title="接口和实现（Interfaces and Implementations）"></a>接口和实现（Interfaces and Implementations）</h2><p>为了规范容器的行为，统一设计，JCF定义了14种容器接口（collection interfaces），它们的关系如下图所示:</p>
+<p><img src="media/JCF_Collection_Interfaces.png" alt="JCF_Collection_Interfaces"></p>
+<p>上述接口的通用实现见下表：</p>
+<table align="center"><tr><td colspan="2" rowspan="2" align="center" border="0"></td><th colspan="5" align="center">Implementations</th></tr><tr><th>Hash Table</th><th>Resizable Array</th><th>Balanced Tree</th><th>Linked List</th><th>Hash Table + Linked List</th></tr><tr><th rowspan="4">Interfaces</th><th>Set</th><td><tt>HashSet</tt></td><td></td><td><tt>TreeSet</tt></td><td></td><td><tt>LinkedHashSet</tt></td></tr><tr><th>List</th><td></td><td><tt>ArrayList</tt></td><td></td><td><tt>LinkedList</tt></td><td></td></tr><tr><th>Deque</th><td></td><td><tt>ArrayDeque</tt></td><td></td><td><tt>LinkedList</tt></td><td></td></tr><tr><th>Map</th><td><tt>HashMap</tt></td><td></td><td><tt>TreeMap</tt></td><td></td><td><tt>LinkedHashMap</tt></td></tr></table>
+
+
 
       
     </div>
@@ -337,12 +339,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/design-pattern/" rel="tag"># design pattern</a>
-          
-        </div>
-      
 
       
       
@@ -352,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/28/2017-12-07_template_mathod/" rel="next" title="设计模式系列-模板方法模式">
-                <i class="fa fa-chevron-left"></i> 设计模式系列-模板方法模式
+              <a href="/2017/11/28/2017-11-28_design principle/" rel="next" title="设计模式-六大设计原则">
+                <i class="fa fa-chevron-left"></i> 设计模式-六大设计原则
               </a>
             
           </div>
@@ -361,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/08/2019-04-08 JCF-Overview/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,7 +480,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计原则"><span class="nav-number">1.</span> <span class="nav-text">设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开闭原则（OCP）："><span class="nav-number">1.1.</span> <span class="nav-text">开闭原则（OCP）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单一职责原则（SRP）："><span class="nav-number">1.2.</span> <span class="nav-text">单一职责原则（SRP）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#里氏替换原则（LSP）："><span class="nav-number">1.3.</span> <span class="nav-text">里氏替换原则（LSP）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖倒置原则（DIP）："><span class="nav-number">1.4.</span> <span class="nav-text">依赖倒置原则（DIP）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口隔离原则（ISP）："><span class="nav-number">1.5.</span> <span class="nav-text">接口隔离原则（ISP）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迪米特法则（LoD）又称最少知识原则（LKP）"><span class="nav-number">1.6.</span> <span class="nav-text">迪米特法则（LoD）又称最少知识原则（LKP）:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JCF-Overview"><span class="nav-number">1.</span> <span class="nav-text">JCF - Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型（Generics）"><span class="nav-number">1.1.</span> <span class="nav-text">泛型（Generics）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口和实现（Interfaces-and-Implementations）"><span class="nav-number">1.2.</span> <span class="nav-text">接口和实现（Interfaces and Implementations）</span></a></li></ol></li></ol></div>
             
 
           </div>

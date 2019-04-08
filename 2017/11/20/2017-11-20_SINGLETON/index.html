@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -74,21 +74,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="design pattern," />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="design pattern,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
 
 
 
@@ -103,12 +103,12 @@
 <meta property="og:site_name" content="FlameYu&#39;s Blog">
 <meta property="og:description" content="设计模式系列-单例模式定义 Ensure a class only one instance, and provide a global point of access it.确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。  应用优点 单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/screenshot.png">
-<meta property="og:updated_time" content="2017-11-21T06:13:12.000Z">
+<meta property="og:image" content="http://ovhpt42w3.bkt.clouddn.com/单例模式.png">
+<meta property="og:updated_time" content="2018-01-24T15:09:07.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-单例模式">
 <meta name="twitter:description" content="设计模式系列-单例模式定义 Ensure a class only one instance, and provide a global point of access it.确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。  应用优点 单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。">
-<meta name="twitter:image" content="http://ovhpt42w3.bkt.clouddn.com/screenshot.png">
+<meta name="twitter:image" content="http://ovhpt42w3.bkt.clouddn.com/单例模式.png">
 
 
 
@@ -138,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://FlameYu.github.io/2017/11/20/2017-11-20_SINGLETON/"/>
+  <link rel="canonical" href="http://FlameYu.github.io/2017/11/20/2017-11-20_SINGLETON/">
 
 
 
@@ -172,7 +172,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">FlameYu's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -202,7 +202,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -212,7 +212,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -255,7 +255,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Flame Yu">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -319,7 +319,7 @@
 
       
         <h1 id="设计模式系列-单例模式"><a href="#设计模式系列-单例模式" class="headerlink" title="设计模式系列-单例模式"></a>设计模式系列-单例模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
-<p>Ensure a class only one instance, and provide a global point of access it.<br>确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。<br><img src="http://ovhpt42w3.bkt.clouddn.com/screenshot.png" alt="screenshot"></p>
+<p>Ensure a class only one instance, and provide a global point of access it.<br>确保某一个类只有一个实例，并且提供一个全局方法来获取这单一实例。<br><img src="http://ovhpt42w3.bkt.clouddn.com/单例模式.png" alt="单例模式"></p>
 </blockquote>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li>单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，并且该对象实例化需要花费大量的资源，单例模式的优势就非常明显。</li>
@@ -335,22 +335,22 @@
 <li>饿汉式单例模式 </li>
 </ul>
 <p>在类创建的同时就已经创建好一个静态的对象供系统使用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton singleton = <span class="keyword">new</span> Singleton();</div><div class="line">	</div><div class="line">	<span class="comment">//限制产生多个对象</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//通过该方法获得实例对象</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> singleton;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//类中其他方法，尽量是static</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//限制产生多个对象</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//通过该方法获得实例对象</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> singleton;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//类中其他方法，尽量是static</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>懒汉式单例模式 </li>
 </ul>
 <p>按需加载，则需要加入synchronized 保证多线程下的安全</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</div><div class="line">	</div><div class="line">	<span class="comment">//限制产生多个对象</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//通过该方法获得实例对象</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</div><div class="line">			singleton = <span class="keyword">new</span> Singleton();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> singleton;		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//限制产生多个对象</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//通过该方法获得实例对象</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</span><br><span class="line">			singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> singleton;		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>懒汉式优化</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span> </span>&#123;  </div><div class="line">        <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;  </div><div class="line">            <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </div><div class="line">                singleton = <span class="keyword">new</span> Singleton();  </div><div class="line">            &#125;  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">        <span class="keyword">return</span> singleton;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;  </span><br><span class="line">            <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </span><br><span class="line">                singleton = <span class="keyword">new</span> Singleton();  </span><br><span class="line">            &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>内部类实现方式</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();  </div><div class="line">    &#125;  </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">return</span> SingletonHolder.INSTANCE;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonHolder</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton INSTANCE = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> SingletonHolder.INSTANCE;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>有上限的多例模式：需要参数固定数量对象的模式，他是单例模式的一种拓展。<br>这样的好处是我们可以决定内存中有多少个实例，可以修正单例模式带来的性能问题。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Multition</span></span>&#123;</div><div class="line">    <span class="comment">//指定内存中可以存在的实例的个数</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> maxNumber = <span class="number">3</span>;</div><div class="line">    </div><div class="line">    <span class="comment">//存放实例的Map</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;Integer,Multition&gt; multitions = <span class="keyword">new</span> HashMap&lt;Integer,Multition&gt;();</div><div class="line">    </div><div class="line">    <span class="comment">//在类被加载的创建指定个数的实例</span></div><div class="line">    <span class="keyword">static</span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i&lt; maxNumber ; i++)&#123;</div><div class="line">            multitions.put(i,<span class="keyword">new</span> Multition());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">private</span> Multition（）&#123;&#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Multition <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">        Random r = <span class="keyword">new</span> Random();</div><div class="line">        index = random.nextInt(maxNumber);</div><div class="line">        Multition multition = multitions.get(index);</div><div class="line">        <span class="keyword">return</span> multition;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIndex</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> index;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Multition</span></span>&#123;</span><br><span class="line">    <span class="comment">//指定内存中可以存在的实例的个数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> maxNumber = <span class="number">3</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//存放实例的Map</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;Integer,Multition&gt; multitions = <span class="keyword">new</span> HashMap&lt;Integer,Multition&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//在类被加载的创建指定个数的实例</span></span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i&lt; maxNumber ; i++)&#123;</span><br><span class="line">            multitions.put(i,<span class="keyword">new</span> Multition());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> Multition（）&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Multition <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Random r = <span class="keyword">new</span> Random();</span><br><span class="line">        index = random.nextInt(maxNumber);</span><br><span class="line">        Multition multition = multitions.get(index);</span><br><span class="line">        <span class="keyword">return</span> multition;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIndex</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>使用单例模式需要注意的一点就是 JVM的垃圾回收机制，如果我们的一个单例对象在内存 中长久不使用，JVM就认为这个对象是一个垃圾，在CPU资源空闲的情况下该对象会被清理 掉，下次再调用时就需要重新产生一个对象。</p>
 <ul>
 <li><p>由容器管理单例的生命周期<br>Java EE 容器 和 Spring 可以让对象长久驻留内存。</p>
@@ -449,7 +449,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -472,7 +472,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -540,10 +540,10 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
